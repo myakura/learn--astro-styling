@@ -1,0 +1,59 @@
+---
+const title = 'CSS styling';
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .plain-css * {
+        margin: 0;
+      }
+      .plain-css * + * {
+        margin-top: 1em;
+      }
+    </style>
+    <style lang="scss">
+      .scss {
+        background: #efefef;
+        h2 {
+          color: crimson;
+        }
+        p {
+          margin-top: 2em;
+        }
+      }
+    </style>
+    <style global lang="scss">
+      :root {
+        --this-is: "root";
+      }
+      .scss {
+        p {
+          --this-is: "p inside .scss";
+        }
+      }
+    </style>
+</head>
+<body>
+<h1>Styling</h1>
+
+<div class="plain-css">
+  <h2>plain css</h2>
+  <p>paragraph</p>
+</div>
+
+<div class="scss">
+  <h2>Sass</h2>
+  <p>paragraph</p>
+</div>
+
+</body>
+</html>
