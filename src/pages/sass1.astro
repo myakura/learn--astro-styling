@@ -1,5 +1,6 @@
 ---
-import Sass1 from '../components/Sass1/Sass1.astro'
+import Header from '../components/Header/Header.astro';
+import Sass1 from '../components/Sass1/Sass1.astro';
 const title = 'Sass1';
 ---
 <!DOCTYPE html>
@@ -8,12 +9,15 @@ const title = 'Sass1';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>{title}</title>
-
+    <link rel="stylesheet" href="/style/global.css">
 </head>
 <body>
+<Header></Header>
+<main>
 <h1>{title}</h1>
 
 <Sass1></Sass1>
 
+</main>
 </body>
 </html>
